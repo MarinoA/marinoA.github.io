@@ -1,0 +1,25 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[1,0],
+"classes.html":[1,1],
+"files.html":[2,0],
+"group__mon.html":[0,0],
+"group__mon.html#ga58c2ed007b91178e477ef528138f26ce":[0,0,4],
+"group__mon.html#gacb5381004e9ddd1ed13c4ea808c048a9":[0,0,5],
+"group__mon.html#gaed1c2c5c179b7c8db35166ab3f339fd1":[0,0,3],
+"index.html":[],
+"modules.html":[0],
+"monster_8h_source.html":[2,0,0],
+"pages.html":[],
+"project__settings_8h_source.html":[2,0,1],
+"structenemy__t.html":[0,0,2],
+"structenemy__t.html#a938d74a61f85ac172e53d42fe6e33158":[0,0,2,0],
+"structenemy__t.html#ae448fb16f537982185a0c5e8db56bdc6":[0,0,2,1],
+"structitem__t.html":[0,0,1],
+"structitem__t.html#a051c9e198ee930358372c407a17e8b78":[0,0,1,1],
+"structitem__t.html#ab06e9aa782b61ccfb42f7c48996f6ed4":[0,0,1,2],
+"structitem__t.html#adc08ed1554f35803d229aeaf11216b3f":[0,0,1,0],
+"structitem__t.html#af22ee4279ee5363c31361a4e90db04db":[0,0,1,3],
+"structmonster__game__t.html":[0,0,0],
+"structmonster__game__t.html#a1e6927fa1486224044e568f9c370519b":[0,0,0,0]
+};
