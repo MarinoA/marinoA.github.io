@@ -1,0 +1,119 @@
+.TH "mon" 3 "Sun May 5 2019" "ScrumShank Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mon \- Monster Game Module
+.PP
+This module provides functions to enable playing the game Monster Adventure\&. The terminal interface program Putty was used for USB to UART communication\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmonster_game_t\fP"
+.br
+.ti -1c
+.RI "struct \fBitem_t\fP"
+.br
+.ti -1c
+.RI "struct \fBenemy_t\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBitem_t\fP \fBitem_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBenemy_t\fP \fBenemy_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmonsterGame_init\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Monster Game Module
+.PP
+This module provides functions to enable playing the game Monster Adventure\&. The terminal interface program Putty was used for USB to UART communication\&. 
+
+
+.PP
+\fBWarning:\fP
+.RS 4
+This game was designed on an MSP430F5529, and compatibility is only confirmed on this system\&. 
+.PP
+An FTDI was used to support the internal UART peripheral and is required for this implementation\&. 
+.PP
+This version of the game assumes that the building functionality is located in game\&.c\&. 
+.PP
+As of this version, the building and collision functionality was moved to a separate module, 
+.PP
+which has not been brought into the main repository\&. In order for the game to be playable the functions 
+.PP
+in game_building\&.c and \&.h need to either be moved into game\&.c and \&.h or these files need to be included\&.
+.RE
+.PP
+Creating a main file:
+.IP "\(bu" 2
+Disable watchdog timer
+.IP "\(bu" 2
+Set clock to 24MHz
+.IP "\(bu" 2
+Disable Interrupts
+.IP "\(bu" 2
+Run Task_Init()
+.IP "\(bu" 2
+Run UART_Init(SUBSYSTEM_UART) NOTE: Buffer size should be increased to 2048
+.IP "\(bu" 2
+Enable Interrupts
+.IP "\(bu" 2
+Run \fBmonsterGame_init()\fP
+.IP "\(bu" 2
+Run Log_EchoOn()
+.IP "\(bu" 2
+Run a while loop for SystemTick()
+.PP
+.PP
+Launching the game: In the terminal, call $game mon play
+.PP
+Game Rules: The player ('&') starts in the town area, which contains buildings and loot\&. Each piece of loot is a single character and can be added to the player's inventory by moving the player character to the spot on the ground where the loot resides\&. Once the player decides they are sufficiently equipped, they can choose to enter the portal, designated as '***'\&. Upon entering the portal, the player will begin a turn-based fighting encounter, during which all necessary information will be displayed\&. Successfully completing the encounter will bring the player back to town where they can pick up additional health potions before returning to the portal for a new encounter\&. Once the player dies, a total score will be shown equal to the number of slain enemies\&. The game can be replayed by pressing the reset button on the embedded device\&.
+.PP
+Game Controls: When in the 'town' screen, use:
+.IP "\(bu" 2
+'w' to move up
+.IP "\(bu" 2
+'a' to move left
+.IP "\(bu" 2
+'s' to move down
+.IP "\(bu" 2
+'d' to move right When in an encounter, all relevant controls are displayed\&.
+.PP
+.PP
+\fBAuthor:\fP
+.RS 4
+Alex Marino 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBenemy_t\fP \fBenemy_t\fP"
+Enemy Structure 
+.SS "typedef struct \fBitem_t\fP \fBitem_t\fP"
+Item Structure 
+.SH "Function Documentation"
+.PP 
+.SS "void monsterGame_init (void)"
+Function DeclarationsGeneral Functions 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ScrumShank Final Project from the source code\&.
