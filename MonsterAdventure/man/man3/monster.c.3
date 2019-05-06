@@ -1,0 +1,228 @@
+.TH "monster.c" 3 "Mon May 6 2019" "Monster Adventure Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+monster.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'monster\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAP_WIDTH\fP   40"
+.br
+.ti -1c
+.RI "#define \fBMAP_HEIGHT\fP   30"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmonsterGame_init\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHelp\fP (void)"
+.br
+.ti -1c
+.RI "void \fBMapInit\fP (void)"
+.br
+.ti -1c
+.RI "void \fBPlay\fP (void)"
+.br
+.ti -1c
+.RI "void \fBReplay\fP (void)"
+.br
+.ti -1c
+.RI "void \fBReceiver\fP (uint8_t c)"
+.br
+.ti -1c
+.RI "void \fBMoveDown\fP (void)"
+.br
+.ti -1c
+.RI "void \fBMoveUp\fP (void)"
+.br
+.ti -1c
+.RI "void \fBMoveLeft\fP (void)"
+.br
+.ti -1c
+.RI "void \fBMoveRight\fP (void)"
+.br
+.ti -1c
+.RI "void \fBClearLine\fP (int x, int line)"
+.br
+.ti -1c
+.RI "void \fBSpawnItems\fP (void)"
+.br
+.ti -1c
+.RI "void \fBCheckPortal\fP (void)"
+.br
+.ti -1c
+.RI "void \fBBattleReceiver\fP (uint8_t c)"
+.br
+.ti -1c
+.RI "void \fBStartBattle\fP (void)"
+.br
+.ti -1c
+.RI "void \fBattack\fP (void)"
+.br
+.ti -1c
+.RI "void \fBblock\fP (void)"
+.br
+.ti -1c
+.RI "void \fBhealth\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdamage\fP (void)"
+.br
+.ti -1c
+.RI "void \fBWinBattle\fP (void)"
+.br
+.ti -1c
+.RI "void \fBDeath\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBcyclops\fP []"
+.br
+.ti -1c
+.RI "char * \fBdragon\fP []"
+.br
+.ti -1c
+.RI "char * \fBgryphon\fP []"
+.br
+.ti -1c
+.RI "char * \fBdeath\fP []"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MAP_HEIGHT   30"
+
+.PP
+Definition at line 4 of file monster\&.c\&.
+.SS "#define MAP_WIDTH   40"
+
+.PP
+Definition at line 3 of file monster\&.c\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char* cyclops[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {"            _\&.\&.\&.\&.\&.\&.\&._",
+                   "        \&.-'\&.'\&.'\&.'\&.'\&.'\&.`-\&.",
+                   "      \&.'\&.'\&.'\&.'\&.'\&.'\&.'\&.'\&.'\&.`\&.",
+                   "     /\&.'\&.'               '\&.\ ",
+                   "     |\&.'    _\&.--\&.\&.\&.--\&._     |",
+                   "     \    `\&._\&.-\&.\&.\&.\&.\&.-\&._\&.'   /",
+                   "     |     _\&.\&.- \&.-\&. -\&.\&._   |",
+                   "  \&.-\&.'    `\&.   ((@))  \&.'   '\&.-\&.",
+                   " ( ^ \      `--\&.   \&.-'     / ^ )",
+                   "  \  /         \&.   \&.       \  /",
+                   "  /          \&.'     '\&.  \&.-    \ ",
+                   " ( _\&.\    \ (_`-\&._\&.-'_)    /\&._\)",
+                   "  `-' \   ' \&.--\&.          / `-'",
+                   "      |  / /|_| `-\&._\&.'\   |",
+                   "      |   |       |_| |   /-\&.\&._",
+                   "   \&.\&.-\   `\&.--\&.______\&.'  |",
+                   "       \       \&.\&.\&.\&.\&.     |",
+                   "        `\&.  \&.'      `\&.  /",
+                   "          \           \&.'",
+                   "           `-\&.\&.___\&.\&.-`         ",
+                                    '\0'}
+.fi
+.PP
+Definition at line 19 of file monster\&.c\&.
+.SS "char* death[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+"                             ,--\&. ",
+"                            {    } ",
+"                            K,   } ",
+"                           /  `Y` ",
+"                      _   /   / ",
+"                     {_'-K\&.__/ ",
+"                      `/-\&.__L\&._ ",
+"                      /  ' /`\_} ",
+"                     /  ' /     ",
+"             ____   /  ' / ",
+"      ,-'~~~~    ~~/  ' /_ ",
+"    ,'             ``~~~%%', ",
+"   (                     %  Y ",
+"  {                      %% I ",
+" {      -                 %  `\&. ",
+"|       ',                %  ) ",
+"|        |   ,\&.\&.__      __\&. Y ",
+"|    \&.,_\&./  Y ' / ^Y   J   )| ",
+" \\           |' /   |   |   || ",
+"  \\          L_/    \&. _ (_,\&.'( ",
+"   \\,   ,      ^^""' / |      ) ",
+"    \\_  \\          /,L]     / ",
+"      '-_`-,       ` `   \&./` ",
+"         `-(_            ) ",
+"             ^^\\\&.\&.___,\&.--` ",
+'\0'}
+.fi
+.PP
+Definition at line 78 of file monster\&.c\&.
+.SS "char* dragon[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+" <>=======() ",
+"(/\\___   /|\\\         ()==========<>_ ",
+"      \\_/ | \\\       //|\   ______/ \) ",
+"        \\_|  \\\     // | \_/ ",
+"         \\|\\/|\\_  //  /\/ ",
+"           (oo)\ \_//  / ",
+"          //_^_) /  | ",
+"         @@/  |=\  \  | ",
+"              \\_=\\_ \\ | ",
+"                \\==\\ \\|\_ ",
+"            __(|===|(  )} ",
+"            (((~) __(_/ | \\",
+"                 (((~) \\  / ",
+"                 ______/ / ",
+"                 '------' ",
+'\0'}
+.fi
+.PP
+Definition at line 41 of file monster\&.c\&.
+.SS "char* gryphon[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+"                       ______ ",
+"             ______,---'__,---' ",
+"         _,-'---_---__,---' ",
+"  /_    (,  ---____', ",
+" /  ',,   `, ,-' ",
+";/)   ,',,_/,' ",
+"| /\\   ,\&.'//\\ ",
+"`-` \\ ,,'    `\&. ",
+"     `',   ,-- `\&. ",
+"     '/ / |      `,         _ ",
+"     //'',\&.\\_    \&.\\\\      ,{==>- ",
+"  __//   __;_`-  \\ `;\&.__,;' ",
+"((,--,) (((,------;  `--' ",
+"```  '   ```' ",
+'\0'}
+.fi
+.PP
+Definition at line 60 of file monster\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Monster Adventure Game from the source code\&.
