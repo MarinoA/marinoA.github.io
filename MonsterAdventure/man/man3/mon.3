@@ -21,6 +21,12 @@ This module provides functions to enable playing the game Monster Adventure\&. T
 .ti -1c
 .RI "struct \fBenemy_t\fP"
 .br
+.ti -1c
+.RI "struct \fBbuilding_t\fP"
+.br
+.RI "Building Generation Module
+.PP
+Holds building origin, dimensions, and door location\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -59,7 +65,7 @@ As of this version, the building and collision functionality was moved to a sepa
 .PP
 which has not been brought into the main repository\&. In order for the game to be playable the functions 
 .PP
-in game_building\&.c and \&.h need to either be moved into game\&.c and \&.h or these files need to be included\&.
+in \fBgame_building\&.c\fP and \&.h need to either be moved into game\&.c and \&.h or these files need to be included\&.
 .RE
 .PP
 Creating a main file:

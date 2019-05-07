@@ -6,6 +6,8 @@ var searchData=
   ['map_5fheight',['MAP_HEIGHT',['../monster_8c.html#a529d5ebb449edf31d9835d13f4fb9f89',1,'monster.c']]],
   ['map_5fwidth',['MAP_WIDTH',['../monster_8c.html#aa037a6d6a4f04d51c7ec1c9ee9054e76',1,'monster.c']]],
   ['mapinit',['MapInit',['../group__mon.html#ga3c5d88b321a3bb9016d7cf1ab273c054',1,'monster.c']]],
+  ['max_5fx',['max_x',['../structbuilding__t.html#a9fa35b0298cc07be13f0650dc0984aff',1,'building_t']]],
+  ['max_5fy',['max_y',['../structbuilding__t.html#a17caea351bcce3e629b8090502bb4db0',1,'building_t']]],
   ['monster_20adventure_20game',['Monster Adventure Game',['../group__mon.html',1,'']]],
   ['monster_2ec',['monster.c',['../monster_8c.html',1,'']]],
   ['monster_2ed',['monster.d',['../monster_8d.html',1,'']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enemy_5ft',['enemy_t',['../structenemy__t.html',1,'']]]
+  ['building_5ft',['building_t',['../structbuilding__t.html',1,'']]]
 ];

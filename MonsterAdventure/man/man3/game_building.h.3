@@ -1,0 +1,154 @@
+.TH "game_building.h" 3 "Mon May 6 2019" "Monster Adventure Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+game_building.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBbuilding_t\fP"
+.br
+.RI "Building Generation Module
+.PP
+Holds building origin, dimensions, and door location\&. "
+.in -1c
+.in +1c
+.ti -1c
+.RI "enum \fBcheck_collision\fP { \fBNO_COLLISION\fP = 0, \fBCOLLISION\fP = 1, \fBDOOR\fP = 2 }"
+.br
+.RI "Enum to store collision type for use with \fBbuilding_t\fP\&. "
+.ti -1c
+.RI "typedef struct \fBbuilding_t\fP \fBbuilding_t\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBcheck_collision\fP \fBcheck_collision\fP"
+.br
+.RI "Enum to store collision type for use with \fBbuilding_t\fP\&. "
+.ti -1c
+.RI "void \fBGame_DrawBuilding\fP (\fBbuilding_t\fP building)"
+.br
+.RI "Function to draw buildings with doors\&. "
+.ti -1c
+.RI "enum \fBcheck_collision\fP \fBGame_CollisionDown\fP (\fBbuilding_t\fP building, player_t player)"
+.br
+.RI "Dectects collision during downward movement\&. "
+.ti -1c
+.RI "enum \fBcheck_collision\fP \fBGame_CollisionUp\fP (\fBbuilding_t\fP building, player_t player)"
+.br
+.RI "Dectects collision during upward movement\&. "
+.ti -1c
+.RI "enum \fBcheck_collision\fP \fBGame_CollisionLeft\fP (\fBbuilding_t\fP building, player_t player)"
+.br
+.RI "Dectects collision during leftward movement\&. "
+.ti -1c
+.RI "enum \fBcheck_collision\fP \fBGame_CollisionRight\fP (\fBbuilding_t\fP building, player_t player)"
+.br
+.RI "Dectects collision during rightward movement\&. "
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBbuilding_t\fP \fBbuilding_t\fP"
+
+.SS "typedef enum \fBcheck_collision\fP \fBcheck_collision\fP"
+
+.PP
+Enum to store collision type for use with \fBbuilding_t\fP\&. Use these values to determine if a collision occurs or if the object is in a doorway If DOOR is detected, user should produce 2 movements so that the object moves through the door, as the object could move upwards or downwards through the door if it stays in the doorway 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBcheck_collision\fP"
+
+.PP
+Enum to store collision type for use with \fBbuilding_t\fP\&. Use these values to determine if a collision occurs or if the object is in a doorway If DOOR is detected, user should produce 2 movements so that the object moves through the door, as the object could move upwards or downwards through the door if it stays in the doorway 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINO_COLLISION \fP\fP
+.TP
+\fB\fICOLLISION \fP\fP
+.TP
+\fB\fIDOOR \fP\fP
+.PP
+Definition at line 41 of file game_building\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "enum \fBcheck_collision\fP Game_CollisionDown (\fBbuilding_t\fP building, player_t player)"
+
+.PP
+Dectects collision during downward movement\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuilding\fP is a \fBbuilding_t\fP
+.br
+\fIplayer\fP is any char_object_t whose position might conflict with a building 
+.RE
+.PP
+
+.PP
+Definition at line 10 of file game_building\&.c\&.
+.SS "enum \fBcheck_collision\fP Game_CollisionLeft (\fBbuilding_t\fP building, player_t player)"
+
+.PP
+Dectects collision during leftward movement\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuilding\fP is a \fBbuilding_t\fP
+.br
+\fIplayer\fP is any player_t whose position might conflict with a building 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file game_building\&.c\&.
+.SS "enum \fBcheck_collision\fP Game_CollisionRight (\fBbuilding_t\fP building, player_t player)"
+
+.PP
+Dectects collision during rightward movement\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuilding\fP is a \fBbuilding_t\fP
+.br
+\fIplayer\fP is any player_t whose position might conflict with a building 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file game_building\&.c\&.
+.SS "enum \fBcheck_collision\fP Game_CollisionUp (\fBbuilding_t\fP building, player_t player)"
+
+.PP
+Dectects collision during upward movement\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuilding\fP is a \fBbuilding_t\fP
+.br
+\fIplayer\fP is any player_t whose position might conflict with a building 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file game_building\&.c\&.
+.SS "void Game_DrawBuilding (\fBbuilding_t\fP building)"
+
+.PP
+Function to draw buildings with doors\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuilding\fP is a \fBbuilding_t\fP that stores building parameters 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file game_building\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Monster Adventure Game from the source code\&.

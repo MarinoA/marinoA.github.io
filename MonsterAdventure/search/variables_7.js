@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['y',['../structitem__t.html#af22ee4279ee5363c31361a4e90db04db',1,'item_t']]]
+  ['x',['x',['../structbuilding__t.html#ab06e9aa782b61ccfb42f7c48996f6ed4',1,'building_t::x()'],['../structitem__t.html#ab06e9aa782b61ccfb42f7c48996f6ed4',1,'item_t::x()']]]
 ];
