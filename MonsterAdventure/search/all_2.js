@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['mapinit',['MapInit',['../group__mon.html#ga3c5d88b321a3bb9016d7cf1ab273c054',1,'monster.c']]],
-  ['monster_20adventure_20game',['Monster Adventure Game',['../group__mon.html',1,'']]],
-  ['monster_5fgame_5ft',['monster_game_t',['../structmonster__game__t.html',1,'']]],
-  ['monstergame_5finit',['monsterGame_init',['../group__mon.html#gacb5381004e9ddd1ed13c4ea808c048a9',1,'monsterGame_init(void):&#160;monster.c'],['../group__mon.html#gacb5381004e9ddd1ed13c4ea808c048a9',1,'monsterGame_init(void):&#160;monster.c']]],
-  ['moveleft',['MoveLeft',['../group__mon.html#ga2050fe125c3956b44c3be0dc28fcb842',1,'monster.c']]]
+  ['c',['c',['../structitem__t.html#adc08ed1554f35803d229aeaf11216b3f',1,'item_t']]],
+  ['checkportal',['CheckPortal',['../group__mon.html#ga82b62ac19682e6e786a004e30817df33',1,'monster.c']]],
+  ['clearline',['ClearLine',['../group__mon.html#ga1509170031fb305089f25466b054ad24',1,'monster.c']]],
+  ['cyclops',['cyclops',['../monster_8c.html#a98f76a5046e1dff86fb50a731ad93f1e',1,'monster.c']]]
 ];

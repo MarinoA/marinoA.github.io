@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['spawnitems',['SpawnItems',['../group__mon.html#ga487f1380410d289fba6ea63cff2ae7d9',1,'monster.c']]],
-  ['startbattle',['StartBattle',['../group__mon.html#ga29431121203db0e3c4c9cafbf7448fbf',1,'monster.c']]]
+  ['battlereceiver',['BattleReceiver',['../group__mon.html#ga602028ffdb1ec6ed0e7cdf67de2e40cb',1,'monster.c']]],
+  ['block',['block',['../group__mon.html#ga5d708605ac49157d0fd86713f210f2d7',1,'monster.c']]]
 ];

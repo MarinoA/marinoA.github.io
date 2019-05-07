@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['item_5ft',['item_t',['../structitem__t.html',1,'item_t'],['../group__mon.html#ga58c2ed007b91178e477ef528138f26ce',1,'item_t():&#160;monster.h']]]
+  ['battlereceiver',['BattleReceiver',['../group__mon.html#ga602028ffdb1ec6ed0e7cdf67de2e40cb',1,'monster.c']]],
+  ['block',['block',['../group__mon.html#ga5d708605ac49157d0fd86713f210f2d7',1,'monster.c']]],
+  ['buffer_2ed',['buffer.d',['../buffer_8d.html',1,'']]],
+  ['buffer_5fprintf_2ed',['buffer_printf.d',['../buffer__printf_8d.html',1,'']]]
 ];
