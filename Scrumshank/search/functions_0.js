@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../printf_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'printf.c']]],
-  ['monstergame_5finit',['monsterGame_init',['../group__mon.html#gacb5381004e9ddd1ed13c4ea808c048a9',1,'monster.h']]],
-  ['myprintf',['myprintf',['../printf_8c.html#a388d3cd2b959752821522bcca812ccba',1,'printf.c']]]
+  ['access',['Access',['../group__brainframe.html#ga3ef0d305614845bd9081848cc1c9a8d0',1,'Brainframe_main.c']]],
+  ['arm',['Arm',['../group__mic.html#ga3a4d3596f3cfeb265abc5f788cbfde34',1,'Arm(void):&#160;MikeMic.c'],['../group__trap.html#ga3a4d3596f3cfeb265abc5f788cbfde34',1,'Arm(void):&#160;Operation_Maze.c']]]
 ];

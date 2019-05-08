@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sizestring',['sizeString',['../printf_8c.html#ae949defae721d9f724508035040bb121',1,'printf.c']]],
-  ['status',['status',['../structitem__t.html#a051c9e198ee930358372c407a17e8b78',1,'item_t']]]
+  ['testing',['testing',['../group__mic.html#gae10c73d66b04f2112dc52e2c1c697b4c',1,'MikeMic.c']]],
+  ['timer',['timer',['../group__mic.html#ga77863fb146d1ccc9c53a03bfb576b6b7',1,'MikeMic.c']]]
 ];
