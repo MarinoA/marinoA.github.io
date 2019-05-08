@@ -145,7 +145,13 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The Brainframe main file used for defining callback functions and controlling timing of the thief simulator. </p>
 <p>The Brainframe is the master node of the Thief Simulator game. The Brainframe is responsible for arming and disarming traps, updating the difficulty of the traps, and keeping track of the overall score of the current player. When a new game begins, the Brainframe operator will call the $brainframe start callback. This will arm all traps and schedule a task to keep track of elapsed time. As the player traverses the course, the Brainframe will be awaiting messages from the traps. If a trap is set off, the Brainframe will receive a trip message, adding a time penalty to the central time. When a player successfully navigates past a trap, the Brainframe will receive an access message. This indicates that the trap is completed and disarmed. When the Brainframe receives an access message from the designated last trap, the timer will stop and the final time including any penalties will be displayed, as the thief has successfully completed the course. As the name suggests, the Brainframe ties all components together. Without the central node, each project would operate fine independently, but without much purpose. The interconnection between each thief module allows for a highly customizable game that users can modify easily and implement with as many or as few modules as desired.</p>
-<p>Supported callbacks: $brainframe start: sends a disarm to all traps, starts a 5 second countdown, sends arm to all traps, starts game timer $brainframe arm [address] [difficulty]: arms specified trap with specified difficulty $brainframe disarm [address] [difficulty]: disarms specified trap with specified difficulty $brainframe difficulty [address] [difficulty]: sets the difficulty of the specified trap without arming or disarming $net1 connected: views which traps have sent a message to the brainframe</p>
+ <h3>Supported callbacks:</h3>
+ <dl class="section warning"><dt>Warning</dt><dd>The start callback assumes it has been implemented as a callback in thief_brainframe.c </dd></dl>
+ <p>	$brainframe start: sends a disarm to all traps, starts a 5 second countdown, sends arm to all traps, starts game timer <br>
+		$brainframe arm [address] [difficulty]: arms specified trap with specified difficulty <br>
+		$brainframe disarm [address] [difficulty]: disarms specified trap with specified difficulty <br>
+		$brainframe difficulty [address] [difficulty]: sets the difficulty of the specified trap without arming or disarming <br>
+		$net1 connected: views which traps have sent a message to the brainframe </p>
 <dl class="section author"><dt>Author</dt><dd>Alex Marino </dd>
 <dd>
 David Gaffney </dd>

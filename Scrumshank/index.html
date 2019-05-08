@@ -97,6 +97,68 @@ which features a group of supernatural "phantom thieves" that can sneak into a p
 twisted desires to change their evil nature. Some traps were also inspired by those found in classic spy movies 
 and Indiana Jones and the Temple of Doom. </p>
 <img src="https://i.imgur.com/WbPPD0w.png" alt = "indiana_muhl" style="width:620px;height:349px;">
+<p> Each group in the class was tasked with designing a trap (or multiple traps) to act as the obstacles in the game.
+ Additionally, one team would design the central hub (brainframe) to control all of the traps, and keep track of scoring.</p>
+ <p>To play the game, a player would approach the first obstacle and wait for the brainframe operator to tell them when 
+ to begin. When the brainframe operator begins the round, the time will start and the player can start traversing the course. </p>
+ <p> Scoring for the game is time based. The clock counts up in seconds. If the player trips or fails a trap, a penalty is sent 
+ to the brainframe which adds time to the player’s overall time. This penalty is usually scaled based on the difficulty determined 
+ by the brainframe. If a trap is not tripped, no time penalty will be added. However, each time a trap is tripped, the trap will tell 
+ the brainframe to add the penalty to the player’s time.  Players should aim to complete traps quickly and carefully to ensure their 
+ final time is as low as possible.  Unlike a normal “High-Score” system where players strive for the most points possible, the objective 
+ of this game is to have a low score.  Since the goal is to carefully speed through multiple traps, it was determined that players should 
+ be scored on lowest time instead of highest score. This was the most practical solution as the brainframe would have no way of knowing 
+ whether a trap was successfully traversed, as no trip or access messages would be sent if the player passes through undetected. </p>
+ <p>The Brainframe uses an NRF network to wirelessly relay signals to Branches and Leaves. The Branches and Leaves help classify 
+ traps into their own sections.  Each group has its own Branch trap, and the remaining traps are Leaves.  In practice, the Brainframe 
+ would send data to the Branch trap and this Branch trap would further spread pertinent data to its Leaves. </p>
+ <h3>Supported callbacks:</h3>
+ <p>	$brainframe start: sends a disarm to all traps, starts a 5 second countdown, sends arm to all traps, starts game timer <br>
+		$brainframe arm [address] [difficulty]: arms specified trap with specified difficulty <br>
+		$brainframe disarm [address] [difficulty]: disarms specified trap with specified difficulty <br>
+		$brainframe difficulty [address] [difficulty]: sets the difficulty of the specified trap without arming or disarming <br>
+		$net1 connected: views which traps have sent a message to the brainframe </p>
+<h1> Operation and Use </h1>
+<p>The Scrumshank Redemption team was responsible for design of the central hub (brainframe) and two traps. The two traps designed 
+were the Operation Maze, and the MikeMic. </p>
+<p>The Brainframe is used to control all of the traps in the Thief Simulator. It uses an NRF network to arm and disarm traps connected 
+to the network. It can also update the difficulty of each trap. The Brainframe keeps track of scoring (time) and processing messages from 
+the traps. This includes updating the score when penalties are received, and stopping the game when the appropriate access messages are received. </p>
+<p>The Operation Maze was designed to simulate disabling an alarm system. The thief has to bring a ball through a maze without setting off the 
+vibration sensor connected to the maze. When the ball reaches the end of the maze, the trap is completed and disabled. The thief will receive time 
+penalties each time they trigger the vibration sensor. </p>
+<p>The MikeMic is a trap that only allows access when the player keeps their hand in a certain range away from an ultrasonic sensor.  The player 
+is notified of their distance from the random range and from the ultrasonic sensor using LEDs and Serial display.  After remaining in the specified 
+range for long enough, the trap will disarm and allow access to the next trap. </p>
+<h1> Final Results and Conclusions</h1>
+<p>With nearly all initial specifications met, the Thief Simulator game turned out to be a successful project with a working deliverable.  
+With variations to the intended result, the game turned out to be fully functioning without extraneous additions that were scrapped early 
+on in the design process. The NRF network proved to be a challenge because of its complex, yet somewhat unreliable nature. The Embedded 
+Software Design class was able to successfully set up and play the Thief Simulator. There were connection issues involving communication 
+between Branches and Leaves, so the finished product resulted in 6 traps set up in succession, all connected as Branches communicating 
+directly to the Brainframe. Multiple players were able to complete rounds of the game, and compare scores afterwards. </p>
+<h1>Project Photos</h1>
+<img src="https://i.imgur.com/7HhEkgu.png" alt = "brainframe" style="width:620px;height:349px;">
+<figcaption>Brainframe terminal interface during a game</figcaption> <br>
+<img src="https://i.imgur.com/uGtbO04.jpg" alt = "malone" style="width:678px;height:512px;">
+<figcaption>MikeMic with ultrasonic sensor</figcaption><br>
+<img src="https://i.imgur.com/ao2qZr2.jpg" alt = "sorce1" style="width:756px;height:579px;">
+<figcaption>Side view of the Operation Maze</figcaption><br>
+<img src="https://i.imgur.com/FFD8Zym.jpg" alt = "sorce2" style="width:756px;height:739px;">
+<figcaption>Top view of the Operation Maze</figcaption><br>
+
+<h1>Usefulness of Slack</h1>
+<p>Slack as a means of communication and file transfer between members was helpful in completing tasks on time and with less issues. 
+It was useful for group work, ease of communication between peers and professor, and quick file sharing between group members. For 
+this project specifically, the ability to contact Professor Muhlbaier with questions streamlined the testing process. Because testing 
+and bug fixing took a majority of the development time, the ability to ask for help at any time expedited the coding process. </p>
+<h1>Usefulness of Trello</h1>
+<p>Trello is a visual way to set up tasks that need to be finished in a certain amount of time. Using trello for this course 
+is helpful to visualize all of the deliverables and assignments that need to be completed during each sprint. The ability to 
+see each group member’s progress through each assignment is also helpful for gauging the group’s progress collectively.  Scrum 
+as a means of work management has always been an effective way to structure the workload.  With respect to this project, it pushed 
+students to work on tasks that continually built on themselves to form a cohesive end product. </p>
+
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
